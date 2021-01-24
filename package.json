@@ -1,0 +1,19 @@
+{
+  "name": "annoybot",
+  "version": "1.0.0",
+  "description": "Discord Bot to Annoy People",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PS1TD/AnnoyBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PS1TD/AnnoyBot/issues"
+  },
+  "homepage": "https://github.com/PS1TD/AnnoyBot#readme"
+}
