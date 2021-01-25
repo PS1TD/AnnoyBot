@@ -1,8 +1,11 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
 
-PREFIX = "!!"
-CHANNEL_ID = "803026733019562014"
+require("dotenv").config()
+const TOKEN = process.env.TOKEN
+
+const PREFIX = "!!"
+const CHANNEL_ID = "803026733019562014"
 
 let annoyed
 
@@ -12,10 +15,14 @@ let messages = [
 	{ text: "IDIOT SANDWICH", gif: "https://media0.giphy.com/media/zKOqnQprdq2gU/giphy.gif" },
 ]
 
-client.login("ODAzMDE3Njc0NDM5MTMxMTU2.YA3qfA.CU8yduifWNZCM97jmRbiwgVTkho")
+client.login(TOKEN)
 
 client.on("ready", () => {
 	console.log(`Logged in as ${client.user.tag}!`)
+	client.user.setPresence({
+		activity: { name: "Hell's Kitchen", type: "WATCHING", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+		status: "idle",
+	})
 })
 
 client.on("message", (message) => {
