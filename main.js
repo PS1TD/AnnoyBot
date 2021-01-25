@@ -32,7 +32,7 @@ client.on("message", (message) => {
 		if (!message.content.startsWith(PREFIX)) {
 			if (annoyed === null) {
 				message.channel.send(`Set the person to annoy with ${PREFIX}annoy @Person`)
-			} else if (message.attachments.size > 0) {
+			} else if (message.attachments.size > 0 && annoyed !== null) {
 				let i = Math.floor(Math.random() * messages.length)
 				message.channel.send(`<@${annoyed.id}>` + " " + messages[i].text + "\n" + messages[i].gif)
 			}
